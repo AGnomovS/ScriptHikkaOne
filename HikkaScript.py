@@ -101,7 +101,8 @@ class LesopilkaMod(loader.Module):
             return
         if re.search(r"Поступило сообщение от администрации", message.text, re.IGNORECASE):
             self.reported = True
+            await asyncio.sleep(random.uniform(2.5, 12.5))
             await utils.answer(message, f"репорт ({self.report_answer})")
-            
-            await asyncio.sleep()
+            delay = random.uniform(80, 250)
+            await asyncio.sleep(delay)
             self.reported = False
