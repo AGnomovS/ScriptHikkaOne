@@ -29,7 +29,7 @@ class LesopilkaMod(loader.Module):
             await asyncio.sleep(delay)
 
             async for message in self._client.iter_messages(6124218890, limit=1):
-                if re.search(r"Вы начали рубить деревья", message.text) or re.search(r"Вы успешно срубили дерево", message.text):
+                if re.search(r"Вы начали рубить деревья", message.text) or re.search(r"Вы успешно срубили дерево", message.text) or re.search(r"вы слишком быстро пытаетесь рубить деревья", message.text):
                     await message.click(data=b"lesopilkasuccess")
                     self.count += 1
                 elif re.search(r"начните заново работу на лесопилке", message.text):
