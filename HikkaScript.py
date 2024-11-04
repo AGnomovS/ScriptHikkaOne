@@ -19,6 +19,7 @@ class LesopilkaMod(loader.Module):
         self.delay_max = None
         self.sent_start_message = False
         self.report_answer = "Я играю честно, просто задрот."
+        self.reported = False
 
     async def lesopilka_loop(self):
         while self.running:
