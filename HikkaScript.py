@@ -97,7 +97,7 @@ class LesopilkaMod(loader.Module):
     async def watcher(self, message: Message):
         if not self.running or not self.report_answer:
             return
-        if not isinstance(message.peer_id, PeerUser) or message.peer_id.user_id != 6124218890:
+        if not message.from_id or message.from_id != 6124218890:
             return
         if re.search(r"Поступило сообщение от администрации", message.text, re.IGNORECASE):
             self.reported = True
