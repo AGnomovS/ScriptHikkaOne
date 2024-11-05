@@ -3,7 +3,7 @@ import asyncio
 import re
 import time
 import random
-from telethon.tl.types import Message, PeerUser
+from telethon.tl.types import Message
 from telethon import Button
 
 @loader.tds
